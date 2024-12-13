@@ -42,3 +42,27 @@
   background-color: #000; /* Change color if necessary */
   border: none; /* Remove default border */
 }
+
+.lastPara {
+  display: flex;
+
+  gap: 5px; /* Space between the elements */
+  flex-wrap: wrap; /* Adjust for small screens if needed */
+  
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.lastPara p,
+.lastPara a {
+  margin: 0;
+  display: inline; /* Ensures all content is inline */
+  font-size: 14px; /* Adjust size if needed */
+}
+
+.lastPara a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}

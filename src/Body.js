@@ -1,12 +1,25 @@
 import React from "react";
 import "./Body.css";
+import { useNavigate } from "react-router-dom";
+
+import NavBar from "./Navbar";
 
 const Body = () => {
+  const navigate = useNavigate();
+  const handleContinue = () => {
+    // Add a delay of 2 seconds (2000 milliseconds)
+    setTimeout(() => {
+      navigate("/account");
+    }, 1000);
+  };
+
   return (
     <main className="body">
-      <div className="menu">
-        <img src="menu.png" alt="menu" />
-      </div>
+      <NavBar />
+
+      <div className="menu">{/* <img src="menu.png" alt="menu" /> */}</div>
+      <br />
+      <br />
 
       <div className="path">
         <a className="Home" href="#">
@@ -18,6 +31,10 @@ const Body = () => {
 
       <div className="signedInAs">
         <p>Signed in as Fonix Immigration thapa</p>
+        <a className="Logout" href="#">
+          Help
+        </a>
+        <p> | </p>
         <a className="Logout" href="#">
           Logout
         </a>
@@ -40,7 +57,9 @@ const Body = () => {
         <input className="answer" type="text" placeholder="" />
 
         <div className="buttons">
-          <button className="continue">Continue</button>
+          <button className="continue" onClick={() => handleContinue("/account")}>
+            Continue
+          </button>
           <button className="logout">Logout</button>
         </div>
         <button className="report">

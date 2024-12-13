@@ -1,0 +1,66 @@
+.datatable-container {
+  
+  font-family: Arial, sans-serif;
+  width: 80%;
+
+  margin-left: 10%;
+}
+
+.datatable-header {
+  display: flex;
+  justify-content:flex-start;
+  align-content: start;
+
+  margin-bottom: 5px; /* Reduced margin */
+  padding: 5px 10px; /* Adjust padding for tighter layout */
+  gap: 10px; /* Space between child elements */
+}
+
+.search-box input {
+  padding: 5px;
+  width: 250px;
+  border: 2px solid #222222;
+  border-radius: 1px;
+}
+
+.rows-dropdown select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.datatable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.datatable th,
+.datatable td {
+  padding: 10px;
+  text-align: left;
+}
+
+.datatable th {
+  background-color: #fefefe;
+}
+
+.datatable tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.datatable tbody tr:hover {
+  background-color: #f1f1f1;
+}
+.datatable tbody tr:first-child {
+    border-top: 2px solid #000; /* Add top border to the first row */
+  }
+  
+  .datatable tbody tr:last-child {
+    border-bottom: 2px solid #000; /* Add bottom border to the last row */
+  }
