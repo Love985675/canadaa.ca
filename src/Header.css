@@ -1,0 +1,53 @@
+.header {
+  font-family: Lato, Helvetica, sans-serif;
+  text-align: justify;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.left {
+  display: inline-flex;
+  width: 40%;
+}
+.left p {
+  margin-right: 10%;
+  font-size: large;
+  font-weight: bold;
+}
+
+.logo {
+  width: 15%;
+  height: 50%;
+  margin-right: 7%;
+  margin-top: 3%;
+}
+.right{
+    display: inline-flex;
+    background-color: aqua;
+    height: 40%;
+    margin-top: 3%;
+    
+}
+.Français{
+   
+    display: block;
+    text-align: end;
+    margin-right: -85%;
+   color: rgb(33, 33, 33);
+    z-index: -2;
+   
+}
+.right .search-bar {
+
+  padding: 8px;
+  width: 300px;
+  border: solid rgb(206, 206, 206) 1px;
+}
+.search-icon {
+    
+  width: 40px; /* Adjust as needed */
+  cursor: pointer;
+}
