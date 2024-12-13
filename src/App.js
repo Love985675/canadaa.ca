@@ -6,17 +6,20 @@ import Header from "./header";
 import Body from "./Body";
 import Footer from "./Footer";
 import Account from "./Account.js";
+import FullApplicationStatus from './FullApplicationStatus'; // Import the new component
+
 
 function App() {
   return (
     <div className="App">
-      <Router>
+         <Router>
         <Header />
-        <hr className="headerBase"></hr>
-        <br></br>
+        <hr className="headerBase" />
+        <br />
         <Routes>
           <Route path="/" element={<Body />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/full-application-status" element={<FullApplicationStatus />} /> {/* New Route */}
         </Routes>
         <Footer />
       </Router>

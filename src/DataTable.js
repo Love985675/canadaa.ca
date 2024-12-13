@@ -1,9 +1,62 @@
 import React, { useState } from 'react';
 import './DataTable.css';
+import { useNavigate } from 'react-router-dom';
 
 const DataTable = () => {
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
+
+  const [tableData] = useState([
+    {
+      applicationType: "Online Application",
+      applicationNumber: "PR123456",
+      uci:6757657,
+      applicationName: "Amardeep Singh",
+      dateSubmitted: "2024-12-01",
+      currentStatus: "Approved",
+      messages: 2,
+      action: "View",
+      biometricNumber: "BN12345",
+    enrollmentDate: "2024-11-20",
+    expiryDate: "2025-11-20",
+    },
+    {
+      applicationType: "Online Application",
+      applicationNumber: "WP654321",
+      uci:98798787,
+      applicationName: "Hardeep Singh Chahal",
+      dateSubmitted: "2024-11-15",
+      currentStatus: "Approved",
+      messages: 1,
+      action: "View",
+    },
+    {
+      applicationType: "Online Application",
+      applicationNumber: "SP789012",
+      uci:12345678,
+      applicationName: "Gopal Singh",
+      dateSubmitted: "2024-12-05",
+      currentStatus: "Pending",
+      messages: 0,
+      action: "View",
+    },
+    {
+        applicationType: "Online Application",
+        applicationNumber: "SP789012",
+        uci:7987987,
+        applicationName: "Harpreet Singh",
+        dateSubmitted: "2024-12-09",
+        currentStatus: "Approved",
+        messages: 0,
+        action: "View",
+      },
+  ]);
+
+  const handleViewDetails = (row) => {
+    navigate('/full-application-status', { state: { row } });
+  };
+
 
   return (
     <div className="datatable-container">
@@ -53,12 +106,23 @@ const DataTable = () => {
           </tr>
         </thead>
         <tbody>
-          {/* Data rows will be added dynamically later */}
-          <tr>
-            <td colSpan="7" style={{ textAlign: 'center' }}>
-              No data available
-            </td>
-          </tr>
+        {tableData.map((row, index) => (
+            <tr key={index}>
+              <td>{row.applicationType}</td>
+              <td>{row.applicationNumber}</td>
+              <td>{row.applicationName}</td>
+              <td>{row.dateSubmitted}</td>
+              <td>{row.currentStatus}</td>
+              <td>
+                <button onClick={() => handleViewDetails(row)}>Read</button>
+              </td>
+              <td>
+                <a href="#" onClick={(e) => { e.preventDefault(); handleViewDetails(row); }}>
+                  Check full application status
+                </a>
+                </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

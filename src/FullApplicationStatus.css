@@ -1,0 +1,153 @@
+.full-application-card {
+  width: 30%;
+  margin: 20px auto;
+
+  border: 1px solid #f1f1f1;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  height: auto;
+}
+
+.heading-section {
+  background-color: #fdfdfd; /* Blue background */
+
+  padding: 1px;
+  text-align: center;
+}
+
+.details-section {
+  margin-top: 2px;
+  padding: 20px;
+  background-color: white;
+  text-align: justify; /* Justifies the text */
+}
+
+.biometric-details {
+  padding: 0px 0px 10px 20px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  gap: 0px;
+}
+
+.para {
+  display: flex;
+
+  gap: 5px; /* Space between the elements */
+  flex-wrap: wrap; /* Adjust for small screens if needed */
+
+  text-align: center;
+  width: 80%;
+}
+
+.para p,
+.para a {
+  margin: 0;
+  display: inline; /* Ensures all content is inline */
+  font-size: 14px; /* Adjust size if needed */
+}
+
+.para a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.restData {
+  width: 70%;
+  margin-left: 10%;
+  text-align: left;
+}
+
+#section-content {
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.row #heading {
+  font-size: 20px;
+  margin-top: 0px;
+}
+.image {
+  width: 3%;
+}
+
+ul {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 8px 0;
+}
+
+.oneline {
+  display: flex;
+  padding: 5px;
+  gap: 10px;
+}
+.oneline p {
+  margin-top: 0px;
+}
+
+.oneline .rows-dropdown {
+  margin-top: -5px;
+}
+
+.table-container {
+  margin: 20px 0;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  border-radius: 2px;
+}
+
+.table-header {
+  padding: 12px;
+  background-color: #f0f0f0;
+
+  text-align: left;
+  font-weight: bold;
+}
+
+.table-row {
+  transition: background-color 0.3s ease;
+  background-color: rgb(255, 255, 255);
+}
+
+.table-cell {
+  padding: 12px;
+  text-align: left;
+
+  border-bottom: 1px solid #ddd; /* Minimal border */
+border-right: 1px solid #f2f2f2;
+  color: #050505;
+}
+
+.table-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.table-row:hover {
+  background-color: #f1f1f1;
+}
+.styled-table tbody tr:first-child {
+  border-top: 2px solid #000; /* Add top border to the first row */
+}
+
+.styled-table tbody tr:last-child {
+  border-bottom: 2px solid #000; /* Add bottom border to the last row */
+}
