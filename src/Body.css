@@ -1,0 +1,100 @@
+.menu {
+  display: flex;
+  justify-content: left; /* Centers the menu image */
+  align-items: center;
+  margin-left: 10%;
+  margin-top: -2%;
+}
+
+.menu img {
+  width: 110px; /* Adjust the size of the menu icon */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Adds a smooth hover effect */
+}
+
+.menu img:hover {
+  transform: scale(1.1); /* Slightly enlarges the image on hover */
+}
+
+.path {
+  display: inline-flex;
+
+  width: 80%;
+  margin-top: 1%;
+}
+.Home {
+  color: rgb(33, 33, 33);
+  margin-top: 1.3%;
+  margin-right: 3%;
+}
+.iv {
+  margin-left: 3%;
+}
+.signedInAs {
+  display: inline-flex;
+
+  font-size: small;
+
+  margin-left: 50%;
+  width: 40%;
+  margin-top: 0%;
+}
+.Logout {
+  color: rgb(33, 33, 33);
+  margin-top: 2.3%;
+  margin-left: 3%;
+}
+
+.Identity {
+  width: 100%;
+
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 0%;
+}
+
+.fruit {
+  display: inline-flex;
+  width: 100%;
+}
+.fruit .astric {
+  color: rgb(187, 0, 16);
+}
+
+.answer{
+    padding: 8px;
+  width:420px;
+  border: solid rgb(206, 206, 206) 1px;
+}
+.buttons {
+    margin-top: 2%;
+    display: flex;
+    gap: 15px; /* Adjust space between buttons */
+    justify-content:left; /* Centers the buttons horizontally */
+  }
+  
+  button {
+
+   
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+  }
+  
+  .continue {
+    background-color: #0c0b2a;
+    color: white;
+  }
+  
+  
+  
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .report{
+    margin-top: 3%;
+  }
