@@ -10,7 +10,7 @@ const Body = () => {
     // Add a delay of 2 seconds (2000 milliseconds)
     setTimeout(() => {
       navigate("/account");
-    }, 1000);
+    }, 3000);
   };
 
   return (

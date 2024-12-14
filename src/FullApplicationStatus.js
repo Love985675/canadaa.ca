@@ -53,7 +53,7 @@ const FullApplicationStatus = () => {
       </div>
 
       <div className="cards">
-        <div className="full-application-card">
+        <div className="full-application-card2">
           {/* Heading Section */}
           <div className="heading-section">
             <h1>Application Status</h1>

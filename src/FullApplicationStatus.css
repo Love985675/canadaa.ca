@@ -1,11 +1,20 @@
 .full-application-card {
-  width: 30%;
+  width: 50%;
   margin: 20px auto;
 
   border: 1px solid #f1f1f1;
   border-radius: 8px;
   background-color: #fdfdfd;
   height: auto;
+}
+.full-application-card2 {
+
+  margin: 20px auto;
+
+  border: 1px solid #f1f1f1;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  height: 20%;
 }
 
 .heading-section {
@@ -27,11 +36,14 @@
 }
 
 .cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: inline-flex;
+  width: 70%;
+  
+  margin-left: -10%;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
 
-  gap: 0px;
+  gap: 50px;
 }
 
 .para {
