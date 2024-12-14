@@ -47,7 +47,7 @@ p {
 }
 
 .datatable th {
-  background-color: #fefefe;
+  background-color: #f0f0f0;
 }
 
 .datatable tbody tr:nth-child(even) {

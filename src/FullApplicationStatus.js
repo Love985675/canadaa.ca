@@ -282,7 +282,7 @@ const FullApplicationStatus = () => {
             <tbody>
               <tr className="table-row">
                 <td className="table-cell">
-                  <a href="#" className="table-link">
+                  <a href={`./${row.applicationNumber}.pdf`} className="table-link">
                     Original Passport Request
                   </a>
                 </td>
