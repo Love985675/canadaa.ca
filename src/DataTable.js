@@ -1,83 +1,99 @@
-import React, { useState } from 'react';
-import './DataTable.css';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import "./DataTable.css";
+import { useNavigate } from "react-router-dom";
 
 const DataTable = () => {
   const [rowsPerPage, setRowsPerPage] = useState(5);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
   const [tableData] = useState([
     {
       applicationType: "Online Application",
-      applicationNumber: "PR123456",
-      uci:6757657,
+      applicationNumber: "A120345678",
+      uci: 6757657,
       applicationName: "Amardeep Singh",
-      dateSubmitted: "2024-12-01",
+      dateSubmitted: "December 1, 2024",
       currentStatus: "Approved",
       messages: 2,
       action: "View",
       biometricNumber: "BN12345",
-    enrollmentDate: "2024-11-20",
-    expiryDate: "2025-11-20",
+      enrollmentDate: "November 20, 2024",
+      expiryDate: "November 20, 2025",
     },
     {
       applicationType: "Online Application",
-      applicationNumber: "WP654321",
-      uci:98798787,
+      applicationNumber: "W308977824",
+      uci: 1143353430,
+      applicationName: "Vikram Kumar",
+      dateSubmitted: "September 23, 2024",
+      currentStatus: "Approved",
+      messages: 2,
+      submissionConfirm: "September 24 2024",
+
+      action: "View",
+      biometricNumber: "2022409271NJUWKR47161",
+      enrollmentDate: "September 27, 2024",
+      expiryDate: "September 27, 2034",
+      finalDecision: "November 22, 2024",
+      bgcheck: "November 10, 2024",
+    },
+    {
+      applicationType: "Online Application",
+      applicationNumber: "Z987654321",
+      uci: 98798787,
       applicationName: "Hardeep Singh Chahal",
-      dateSubmitted: "2024-11-15",
+      dateSubmitted: "November 15, 2024",
       currentStatus: "Approved",
       messages: 1,
       action: "View",
     },
     {
       applicationType: "Online Application",
-      applicationNumber: "SP789012",
-      uci:12345678,
+      applicationNumber: "M123456789",
+      uci: 12345678,
       applicationName: "Gopal Singh",
-      dateSubmitted: "2024-12-05",
+      dateSubmitted: "December 5, 2024",
       currentStatus: "Pending",
       messages: 0,
       action: "View",
     },
     {
-        applicationType: "Online Application",
-        applicationNumber: "SP789012",
-        uci:7987987,
-        applicationName: "Harpreet Singh",
-        dateSubmitted: "2024-12-09",
-        currentStatus: "Approved",
-        messages: 0,
-        action: "View",
-      },
+      applicationType: "Online Application",
+      applicationNumber: "R562789031",
+      uci: 7987987,
+      applicationName: "Harpreet Singh",
+      dateSubmitted: "December 9, 2024",
+      currentStatus: "Approved",
+      messages: 0,
+      action: "View",
+    },
   ]);
 
   const handleViewDetails = (row) => {
-    navigate('/full-application-status', { state: { row } });
+    navigate("/full-application-status", { state: { row } });
   };
-
 
   return (
     <div className="datatable-container">
       <div className="datatable-header">
         <div className="search-box">
-          <label htmlFor="search"><b>Search:</b> </label>
+          <label htmlFor="search">
+            <b>Search:</b>{" "}
+          </label>
           <input
             id="search"
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            
           />
-          
         </div>
-        <p>
-        Showing 0 to 0 of 0 entries
-      </p>
-      <p>|</p>
+        <p>Showing 0 to 0 of 0 entries</p>
+        <p>|</p>
         <div className="rows-dropdown">
-          <label htmlFor="rows"><b>Show</b> </label>
+          <label htmlFor="rows">
+            <b>Show</b>{" "}
+          </label>
           <select
             id="rows"
             value={rowsPerPage}
@@ -88,25 +104,27 @@ const DataTable = () => {
             <option value={25}>25</option>
             <option value={50}>50</option>
           </select>
-          <span><b> entries</b></span>
+          <span>
+            <b> entries</b>
+          </span>
         </div>
       </div>
-      
+
       <table className="datatable">
         <thead>
           <tr>
-            <th>Application Type  ↑↓</th>
-            
-            <th>Application Number  ↑↓</th>
-            <th>Application Name  ↑↓</th>
-            <th>Date Submitted  ↑↓</th>
-            <th>Current Status  ↑↓</th>
-            <th>Messages  ↑↓</th>
-            <th>Action  ↑↓</th>
+            <th>Application Type ↑↓</th>
+
+            <th>Application Number ↑↓</th>
+            <th>Application Name ↑↓</th>
+            <th>Date Submitted ↑↓</th>
+            <th>Current Status ↑↓</th>
+            <th>Messages ↑↓</th>
+            <th>Action ↑↓</th>
           </tr>
         </thead>
         <tbody>
-        {tableData.map((row, index) => (
+          {tableData.map((row, index) => (
             <tr key={index}>
               <td>{row.applicationType}</td>
               <td>{row.applicationNumber}</td>
@@ -117,10 +135,16 @@ const DataTable = () => {
                 <button onClick={() => handleViewDetails(row)}>Read</button>
               </td>
               <td>
-                <a href="#" onClick={(e) => { e.preventDefault(); handleViewDetails(row); }}>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleViewDetails(row);
+                  }}
+                >
                   Check full application status
                 </a>
-                </td>
+              </td>
             </tr>
           ))}
         </tbody>

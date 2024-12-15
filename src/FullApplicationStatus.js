@@ -69,7 +69,7 @@ const FullApplicationStatus = () => {
               <strong>Latest Update</strong>
             </p>
             <p>
-              <strong>Final decision:</strong> {row.enrollmentDate} Your
+              <strong>Final decision:</strong> {row.finaldecision} Your
               application was approved.Check your messages below for detail.
             </p>
           </div>
@@ -220,7 +220,7 @@ const FullApplicationStatus = () => {
             <img src="qus.png" alt="Image 2" className="image" id="image2" />
           </div>
           <ul id="unordered-list">
-            <li> {row.dateSubmitted} Your Background check was completed</li>
+            <li> {row.bgcheck} Your Background check was completed</li>
           </ul>
         </div>
 
@@ -238,8 +238,8 @@ const FullApplicationStatus = () => {
           <ul id="unordered-list">
             <li>
               {" "}
-              {row.expiryDate} Your application was approved. You need to send
-              us valid passport to finalize your approval
+              {row.finaldecision} Your application was approved. You need to
+              send us valid passport to finalize your approval
             </li>
           </ul>
         </div>
@@ -282,11 +282,14 @@ const FullApplicationStatus = () => {
             <tbody>
               <tr className="table-row">
                 <td className="table-cell">
-                  <a href={`./${row.applicationNumber}.pdf`} className="table-link">
+                  <a
+                    href={`./${row.applicationNumber}.pdf`}
+                    className="table-link"
+                  >
                     Original Passport Request
                   </a>
                 </td>
-                <td className="table-cell">January 10, 2024</td>
+                <td className="table-cell">{row.finalDecision}</td>
               </tr>
               <tr className="table-row">
                 <td className="table-cell">
@@ -294,7 +297,7 @@ const FullApplicationStatus = () => {
                     Correspondence Letter
                   </a>
                 </td>
-                <td className="table-cell">February 5, 2024</td>
+                <td className="table-cell">{row.finalDecision}</td>
               </tr>
               <tr className="table-row">
                 <td className="table-cell">
@@ -302,7 +305,7 @@ const FullApplicationStatus = () => {
                     Submission Confirmation
                   </a>
                 </td>
-                <td className="table-cell">March 1, 2024</td>
+                <td className="table-cell">{row.submissionConfirm}</td>
               </tr>
               <tr className="table-row">
                 <td className="table-cell">
@@ -310,7 +313,7 @@ const FullApplicationStatus = () => {
                     Confirmation of Online Application
                   </a>
                 </td>
-                <td className="table-cell">March 15, 2024</td>
+                <td className="table-cell">{row.dateSubmitted}</td>
               </tr>
             </tbody>
           </table>
